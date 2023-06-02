@@ -15,7 +15,8 @@ include("./nearestNeighbor.jl")
 
 # Fallback method for the case of just one point
 function evaluate(itp::ScatteredInterpolant, points::AbstractArray{<:Real, 1})
-
+    println("DEVELOPMENT VERSION")
+    
     # pairwise requires the points array to be 2-d.
     n = length(points)
     points = reshape(points, n, 1)

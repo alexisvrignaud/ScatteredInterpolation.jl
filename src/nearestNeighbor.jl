@@ -34,6 +34,8 @@ end
 
 function evaluate(itp::NearestNeighborInterpolant, points::AbstractArray{<:Real,2})
 
+    println("Nearest neighbor")
+
     # Get the indices for each points closest neighbor
     inds, _ = knn(itp.tree, points, 1)
 
